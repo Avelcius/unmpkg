@@ -1,23 +1,17 @@
-# unmpkg
+unmpkg
+A tool for unpacking mpkg files exported by Wallpaper Engine
+Introduction
+A tool inspired by this project
 
-## 一个用于给Wallpaper Engine导出的mpkg文件解包的工具
+The big guy's program can only be run on Unix-like systems, and Windows users find it very uncomfortable.
 
-### 简介
-
-受 [该项目](https://github.com/nekoapa/unmpkg) 启发制作的一个工具
-
-那位大佬的程序只能在类unix系统上跑，windows用户表示很难受
-
-### 使用方式
+Usage
 
 ```text
-用法: unmpkg <filename>
-实例: unmpkg test.mpkg
+Usage: unmpkg <filename>
+Example: unmpkg test.mpkg
 ```
+principle
+The encoding method of mpkg format is as follows (the - in the middle is to make it easier to distinguish what each paragraph is, and the content in brackets is the number of bytes occupied):
 
-### 原理
-
-`mpkg` 格式的编码方式如下（中间的 `-` 是为了便于区分每段是什么，括号内的内容是占用字节数）： 
-
-版本号长度（4b）-版本号（8b）-文件数量（4b）-第一个文件名长度（4b）-第一个文件名-第一个文件索引（4b）-第一个文件长度（4b）-第二个文件名长度（4b）-……
-
+Version number length (4b) - version number (8b) - number of files (4b) - first file name length (4b) - first file name - first file index (4b) - first file length ( 4b) - Second file name length (4b) -…
