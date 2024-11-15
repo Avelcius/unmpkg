@@ -1,6 +1,6 @@
 import os
 import sys
-import struct #解决大端序问题用的
+import struct #Used to solve big endian problem
 
 fileLength=[]
 fileName=[]
